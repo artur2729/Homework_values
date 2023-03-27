@@ -23,10 +23,11 @@ class MainActivity : AppCompatActivity() {
                 "Long value: $maxLong\n"
         )
 
-        variables_suma(maxByte, maxShort, maxInt, maxLong)
+        val suma:Double = variables_suma(maxByte, maxShort, maxInt, maxLong)
         variables_char()
         variables_char_asterix()
         comparison(maxInt, maxShort)
+        variables_equal(suma, maxLong)
     }
 
     fun maxValues(){
@@ -42,9 +43,10 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    fun variables_suma(maxByte: Byte, maxShort: Short, maxInt: Int, maxLong: Long){
+    fun variables_suma(maxByte: Byte, maxShort: Short, maxInt: Int, maxLong: Long): Double {
         val suma: Double = maxByte.toDouble() + maxShort.toDouble() + maxInt.toDouble() + maxLong.toDouble()
         Log.i(TAG, "suma: $suma")
+        return suma
     }
 
     fun variables_char(){
@@ -63,6 +65,11 @@ class MainActivity : AppCompatActivity() {
     fun comparison(maxInt: Int, maxShort: Short){
         val Short_is_bigger:Boolean = maxInt < maxShort.toInt()
         Log.i(TAG, "comparison: Is maxShort bigger than maxInt? Answer: $Short_is_bigger")
+    }
+
+    fun variables_equal(suma: Double, maxLong: Long){
+        val equal:Boolean = suma == maxLong.toDouble()
+        Log.i(TAG, "variables_equal: Are both variables suma and maxLong equal? $equal")
     }
 
 }
