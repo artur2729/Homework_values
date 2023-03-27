@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun variables_char(){
-        //val char1 = '88'
+        val char1 = 88.toChar()
         val char2 = '%'
 
-        Log.i(TAG, "variables_char: char1 error, char2 $char2")
+        Log.i(TAG, "variables_char: char1 $char1, char2 $char2")
     }
 
 }
