@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
                 "Long value: $maxLong\n"
         )
 
+        variables_suma(maxByte, maxShort, maxInt, maxLong)
+        variables_char()
     }
 
     fun maxValues(){
@@ -37,5 +39,17 @@ class MainActivity : AppCompatActivity() {
                 "Long value: $maxLong\n"
         )
     }
-    
+
+    fun variables_suma(maxByte: Byte, maxShort: Short, maxInt: Int, maxLong: Long){
+        val suma: Double = maxByte.toDouble() + maxShort.toDouble() + maxInt.toDouble() + maxLong.toDouble()
+        Log.i(TAG, "suma: $suma")
+    }
+
+    fun variables_char(){
+        //val char1 = '88'
+        val char2 = '%'
+
+        Log.i(TAG, "variables_char: char1 error, char2 $char2")
+    }
+
 }
