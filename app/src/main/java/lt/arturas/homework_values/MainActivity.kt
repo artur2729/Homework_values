@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         variables_suma(maxByte, maxShort, maxInt, maxLong)
         variables_char()
         variables_char_asterix()
+        comparison(maxInt, maxShort)
     }
 
     fun maxValues(){
@@ -60,8 +61,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun comparison(maxInt: Int, maxShort: Short){
-        val Int_is_bigger:Boolean = maxInt > maxShort.toInt()
-        Log.i(TAG, "comparison: Is maxInt bigger than maxShort? Answer: $Int_is_bigger")
+        val Short_is_bigger:Boolean = maxInt < maxShort.toInt()
+        Log.i(TAG, "comparison: Is maxShort bigger than maxInt? Answer: $Short_is_bigger")
     }
 
 }
