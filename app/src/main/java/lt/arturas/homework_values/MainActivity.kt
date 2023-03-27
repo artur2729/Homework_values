@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         variables_suma(maxByte, maxShort, maxInt, maxLong)
         variables_char()
+        variables_char_asterix()
     }
 
     fun maxValues(){
@@ -50,6 +51,17 @@ class MainActivity : AppCompatActivity() {
         val char2 = '%'
 
         Log.i(TAG, "variables_char: char1 $char1, char2 $char2")
+    }
+
+    fun variables_char_asterix(){
+        var someChar = '*'
+        val uni = "\\u%04x".format(someChar.code)
+        Log.i(TAG, "variables_char_asterix: Value of * in decimal is: $uni")
+    }
+
+    fun comparison(maxInt: Int, maxShort: Short){
+        val Int_is_bigger:Boolean = maxInt > maxShort.toInt()
+        Log.i(TAG, "comparison: Is maxInt bigger than maxShort? Answer: $Int_is_bigger")
     }
 
 }
