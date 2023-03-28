@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         variables_char_asterix()
         comparison(maxInt, maxShort)
         variables_equal(suma, maxLong)
+        refference()
     }
 
     fun maxValues(){
