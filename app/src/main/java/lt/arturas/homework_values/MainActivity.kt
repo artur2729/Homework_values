@@ -71,5 +71,13 @@ class MainActivity : AppCompatActivity() {
         val equal:Boolean = suma == maxLong.toDouble()
         Log.i(TAG, "variables_equal: Are both variables suma and maxLong equal? $equal")
     }
+    
+    fun refference(){ // done in class
+        
+        var varFloat: Float? = null
+        var varDouble: Double? = null
+
+        Log.i(TAG, "refference: $varFloat $varDouble")
+    }
 
 }
